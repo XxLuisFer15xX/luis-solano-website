@@ -1,4 +1,4 @@
-import hero from '../../assets/images/hero.png'
+import hero from '@assets/images/hero.png'
 
 import FacebookIcon from '@mui/icons-material/Facebook'
 import GitHubIcon from '@mui/icons-material/GitHub'
