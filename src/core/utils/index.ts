@@ -1,0 +1,1 @@
+export { renderColor } from './renders'
