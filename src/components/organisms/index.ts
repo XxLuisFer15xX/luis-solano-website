@@ -1,4 +1,5 @@
 export * from './About'
+export * from './Contact'
 export * from './HeaderMenu'
 export * from './Hero'
 export * from './Project'
