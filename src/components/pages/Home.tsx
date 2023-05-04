@@ -1,5 +1,5 @@
 // Components
-import { About, HeaderMenu, Hero, Skills } from '@organisms'
+import { About, HeaderMenu, Hero, Project, Skills } from '@organisms'
 
 export const Home = () => {
   return (
@@ -8,6 +8,7 @@ export const Home = () => {
       <Hero />
       <About />
       <Skills />
+      <Project />
     </div>
   )
 }
