@@ -4,7 +4,6 @@ import project2 from '@assets/images/project-2.jpg'
 import project3 from '@assets/images/project-3.jpg'
 import project4 from '@assets/images/project-4.jpg'
 import project5 from '@assets/images/project-5.png'
-import project_person from '@assets/images/project_person1.png'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { Pagination, Autoplay } from 'swiper'
@@ -106,19 +105,19 @@ export const Project = () => {
         <p className="text-gray-400 mt-3 text-lg">Algunos de mis proyectos</p>
       </div>
       <br />
-      <div className="flex max-w-6xl gap-6 px-5 mx-auto items-center relative">
-        <div className="lg:w-2/3 w-full">
+      <div className="flex max-w-6xl gap-6 px-5 mx-auto items-center relative ">
+        <div className="w-full">
           <Swiper
             slidesPerView={1.2}
             spaceBetween={20}
             breakpoints={{
               768: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
             }}
             loop={true}
             autoplay={{
-              delay: 3000,
+              delay: 5000,
             }}
             pagination={{
               clickable: true,
@@ -127,8 +126,12 @@ export const Project = () => {
           >
             {projects.map((project_info, i) => (
               <SwiperSlide key={i}>
-                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
-                  <img src={project_info.img} alt="" className="rounded-lg" />
+                <div className="h-fit w-full p-4 mb-12 bg-slate-700">
+                  <img
+                    src={project_info.img}
+                    alt=""
+                    className="rounded-lg w-64 h-40"
+                  />
                   <h3 className="text-xl my-4">{project_info.name}</h3>
                   <div className="flex gap-3">
                     <a
@@ -152,7 +155,7 @@ export const Project = () => {
           </Swiper>
         </div>
         <div className="lg:block hidden">
-          <img src={project_person} alt="" />
+          {/* <img src={project_person} alt="" /> */}
         </div>
       </div>
     </section>

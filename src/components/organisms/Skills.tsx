@@ -1,3 +1,6 @@
+// Components
+import { SkillCard } from '@molecules'
+
 // Assets
 // Backend
 import { ReactComponent as ExpressJSIcon } from '@assets/icons/backend/ExpressJSIcon.svg'
@@ -30,116 +33,116 @@ import { ReactComponent as TypeScriptIcon } from '@assets/icons/languages/TypeSc
 export const Skills = () => {
   const languages = [
     {
-      logo: <HTMLIcon />,
+      logo: <HTMLIcon width={80} height={80} />,
       level: 'HTML',
       count: 100,
     },
     {
-      logo: <CSSIcon />,
+      logo: <CSSIcon width={80} height={80} />,
       level: 'CSS',
       count: 100,
     },
     {
-      logo: <JavaScriptIcon />,
+      logo: <JavaScriptIcon width={80} height={80} />,
       level: 'JavaScript',
       count: 100,
     },
     {
-      logo: <TypeScriptIcon />,
+      logo: <TypeScriptIcon width={80} height={80} />,
       level: 'TypeScript',
       count: 100,
     },
     {
-      logo: <PHPIcon />,
+      logo: <PHPIcon width={80} height={80} />,
       level: 'PHP',
       count: 100,
     },
     {
-      logo: <JavaIcon />,
+      logo: <JavaIcon width={80} height={80} />,
       level: 'Java',
       count: 100,
     },
   ]
   const skillsFrontend = [
     {
-      logo: <ReactIcon />,
+      logo: <ReactIcon width={80} height={80} />,
       level: 'React',
       count: 100,
     },
     {
-      logo: <ReactNativeIcon />,
+      logo: <ReactNativeIcon width={80} height={80} />,
       level: 'React Native',
       count: 100,
     },
     {
-      logo: <NextJSIcon />,
+      logo: <NextJSIcon width={80} height={80} fill="#ffffff" />,
       level: 'NextJS',
       count: 100,
     },
     {
-      logo: <ReduxIcon />,
+      logo: <ReduxIcon width={80} height={80} />,
       level: 'Redux',
       count: 100,
     },
     {
-      logo: <TailwindCSSIcon />,
+      logo: <TailwindCSSIcon width={80} height={80} />,
       level: 'Tailwind CSS',
       count: 100,
     },
     {
-      logo: <MaterialUIIcon />,
+      logo: <MaterialUIIcon width={80} height={80} />,
       level: 'Material UI',
       count: 100,
     },
   ]
   const skillsBacktend = [
     {
-      logo: <NodeJSIcon />,
+      logo: <NodeJSIcon width={80} height={80} />,
       level: 'NodeJS',
       count: 100,
     },
     {
-      logo: <ExpressJSIcon />,
+      logo: <ExpressJSIcon fill="#ffffff" />,
       level: 'Express',
       count: 100,
     },
     {
-      logo: <JWTIcon />,
+      logo: <JWTIcon width={80} height={80} />,
       level: 'JWT',
       count: 100,
     },
     {
-      logo: <SwaggerIcon />,
+      logo: <SwaggerIcon width={80} height={80} />,
       level: 'Swagger',
       count: 100,
     },
     {
-      logo: <FirebaseIcon />,
+      logo: <FirebaseIcon width={80} height={80} />,
       level: 'Firebase',
       count: 100,
     },
     {
-      logo: <MySQLIcon />,
+      logo: <MySQLIcon width={80} height={80} />,
       level: 'MySQL',
       count: 100,
     },
     {
-      logo: <SQLServerIcon />,
+      logo: <SQLServerIcon width={80} height={80} />,
       level: 'SQL Server',
       count: 100,
     },
     {
-      logo: <OracleIcon />,
+      logo: <OracleIcon width={80} height={80} />,
       level: 'Oracle',
       count: 100,
     },
     {
-      logo: <MongoDBIcon />,
+      logo: <MongoDBIcon width={80} height={80} />,
       level: 'MongoDB',
       count: 100,
     },
     {
-      logo: <LaravelIcon />,
+      logo: <LaravelIcon width={80} height={80} />,
       level: 'Laravel',
       count: 100,
     },
@@ -153,64 +156,34 @@ export const Skills = () => {
         <p className="text-gray-400 mt-6 text-lg">Lenguages de programación</p>
         <div className="flex items-center justify-center mt-3 gap-10 flex-wrap">
           {languages?.map((skill, i) => (
-            <div
+            <SkillCard
               key={i}
-              className="border-2 group border-cyan-600 relative min-w-[10rem] max-w-[16rem] bg-gray-900 p-10 rounded-xl"
-            >
-              <div
-                style={{
-                  background: `conic-gradient(rgb(8,145,170) ${skill.count}%,#ddd ${skill.count}%)`,
-                }}
-                className="w-32 h-32 flex items-center justify-center rounded-full"
-              >
-                <div className="text-6xl w-28 h-28 bg-gray-900 rounded-full flex items-center justify-center group-hover:text-cyan-600">
-                  {skill.logo}
-                </div>
-              </div>
-              <p className="text-xl mt-3">{skill.level}</p>
-            </div>
+              count={skill.count}
+              logo={skill.logo}
+              name={skill.level}
+            />
           ))}
         </div>
         <p className="text-gray-400 mt-6 text-lg">Tecnologías Frontend</p>
         <div className="flex items-center justify-center mt-3 gap-10 flex-wrap">
           {skillsFrontend?.map((skill, i) => (
-            <div
+            <SkillCard
               key={i}
-              className="border-2 group border-cyan-600 relative min-w-[10rem] max-w-[16rem] bg-gray-900 p-10 rounded-xl"
-            >
-              <div
-                style={{
-                  background: `conic-gradient(rgb(8,145,170) ${skill.count}%,#ddd ${skill.count}%)`,
-                }}
-                className="w-32 h-32 flex items-center justify-center rounded-full"
-              >
-                <div className="text-6xl w-28 h-28 bg-gray-900 rounded-full flex items-center justify-center group-hover:text-cyan-600">
-                  {skill.logo}
-                </div>
-              </div>
-              <p className="text-xl mt-3">{skill.level}</p>
-            </div>
+              count={skill.count}
+              logo={skill.logo}
+              name={skill.level}
+            />
           ))}
         </div>
         <p className="text-gray-400 mt-12 text-lg">Tecnologías Backend</p>
         <div className="flex items-center justify-center mt-3 gap-10 flex-wrap">
           {skillsBacktend?.map((skill, i) => (
-            <div
+            <SkillCard
               key={i}
-              className="border-2 group border-cyan-600 relative min-w-[10rem] max-w-[16rem] bg-gray-900 p-10 rounded-xl"
-            >
-              <div
-                style={{
-                  background: `conic-gradient(rgb(8,145,170) ${skill.count}%,#ddd ${skill.count}%)`,
-                }}
-                className="w-32 h-32 flex items-center justify-center rounded-full"
-              >
-                <div className="text-6xl w-28 h-28 bg-gray-900 rounded-full flex items-center justify-center group-hover:text-cyan-600">
-                  {skill.logo}
-                </div>
-              </div>
-              <p className="text-xl mt-3">{skill.level}</p>
-            </div>
+              count={skill.count}
+              logo={skill.logo}
+              name={skill.level}
+            />
           ))}
         </div>
       </div>

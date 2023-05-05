@@ -1,9 +1,12 @@
-import hero from '@assets/images/hero.png'
+import hero from '@assets/images/hero.jpg'
 
 import FacebookIcon from '@mui/icons-material/Facebook'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import YouTubeIcon from '@mui/icons-material/YouTube'
+
+// Styles
+import './hero.css'
 
 export const Hero = () => {
   const handleContactMe = () => {
@@ -31,7 +34,11 @@ export const Hero = () => {
       className="min-h-screen flex py-10 md:flex-row flex-col items-center"
     >
       <div className="flex-1 flex items-center justify-center h-full">
-        <img src={hero} alt="" className="md:w-11/12 h-full object-cover" />
+        <img
+          src={hero}
+          alt=""
+          className="object-cover rounded-full profile-hero"
+        />
       </div>
       <div className="flex-1">
         <div className="md:text-left text-center">
