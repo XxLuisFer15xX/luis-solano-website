@@ -13,3 +13,5 @@
 10. Run `npm run dev` to run the project in development mode.
 11. Run `npm run build` to compile the project.
 12. Run `npm start` to run the project in production mode.
+
+nodemailer

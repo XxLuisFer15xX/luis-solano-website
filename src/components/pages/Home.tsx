@@ -1,5 +1,13 @@
 // Components
-import { About, Contact, HeaderMenu, Hero, Project, Skills } from '@organisms'
+import {
+  About,
+  Contact,
+  HeaderMenu,
+  Hero,
+  Hireme,
+  Project,
+  Skills,
+} from '@organisms'
 
 export const Home = () => {
   return (
@@ -8,6 +16,7 @@ export const Home = () => {
       <Hero />
       <About />
       <Skills />
+      <Hireme />
       <Project />
       <Contact />
     </div>

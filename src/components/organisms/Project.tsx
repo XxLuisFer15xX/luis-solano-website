@@ -7,14 +7,13 @@ import project5 from '@assets/images/project-5.png'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { Pagination, Autoplay } from 'swiper'
+import { ProjectCard } from '@molecules'
 
 export const Project = () => {
   const projects = [
     {
       img: project1,
       name: 'Movie App',
-      github_link: 'https://github.com/Sridhar-C-25',
-      live_link: 'https://myreactflix.netlify.app',
     },
     {
       img: project2,
@@ -34,60 +33,6 @@ export const Project = () => {
       github_link:
         'https://github.com/Sridhar-C-25/reacttailwindnavbar-with-dropdown',
       live_link: 'https://reacttailwindnavbar.netlify.app',
-    },
-    {
-      img: project5,
-      name: 'Vue Country',
-      github_link: 'https://github.com/Sridhar-C-25',
-      live_link: 'https://vuecountry05.netlify.app',
-    },
-    {
-      img: project5,
-      name: 'Vue Country',
-      github_link: 'https://github.com/Sridhar-C-25',
-      live_link: 'https://vuecountry05.netlify.app',
-    },
-    {
-      img: project5,
-      name: 'Vue Country',
-      github_link: 'https://github.com/Sridhar-C-25',
-      live_link: 'https://vuecountry05.netlify.app',
-    },
-    {
-      img: project5,
-      name: 'Vue Country',
-      github_link: 'https://github.com/Sridhar-C-25',
-      live_link: 'https://vuecountry05.netlify.app',
-    },
-    {
-      img: project5,
-      name: 'Vue Country',
-      github_link: 'https://github.com/Sridhar-C-25',
-      live_link: 'https://vuecountry05.netlify.app',
-    },
-    {
-      img: project5,
-      name: 'Vue Country',
-      github_link: 'https://github.com/Sridhar-C-25',
-      live_link: 'https://vuecountry05.netlify.app',
-    },
-    {
-      img: project5,
-      name: 'Vue Country',
-      github_link: 'https://github.com/Sridhar-C-25',
-      live_link: 'https://vuecountry05.netlify.app',
-    },
-    {
-      img: project5,
-      name: 'Vue Country',
-      github_link: 'https://github.com/Sridhar-C-25',
-      live_link: 'https://vuecountry05.netlify.app',
-    },
-    {
-      img: project5,
-      name: 'Vue Country',
-      github_link: 'https://github.com/Sridhar-C-25',
-      live_link: 'https://vuecountry05.netlify.app',
     },
     {
       img: project5,
@@ -126,30 +71,12 @@ export const Project = () => {
           >
             {projects.map((project_info, i) => (
               <SwiperSlide key={i}>
-                <div className="h-fit w-full p-4 mb-12 bg-slate-700">
-                  <img
-                    src={project_info.img}
-                    alt=""
-                    className="rounded-lg w-64 h-40"
-                  />
-                  <h3 className="text-xl my-4">{project_info.name}</h3>
-                  <div className="flex gap-3">
-                    <a
-                      href={project_info.github_link}
-                      target="_blank"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                    >
-                      Github
-                    </a>
-                    <a
-                      href={project_info.live_link}
-                      target="_blank"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                    >
-                      Live Demo
-                    </a>
-                  </div>
-                </div>
+                <ProjectCard
+                  img={project_info.img}
+                  name={project_info.name}
+                  github_link={project_info.github_link}
+                  live_link={project_info.live_link}
+                />
               </SwiperSlide>
             ))}
           </Swiper>

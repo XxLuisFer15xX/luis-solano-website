@@ -61,7 +61,7 @@ export const Hero = () => {
                 key={i}
                 className="text-gray-600 hover:text-white cursor-pointer "
               >
-                <a href={icon.link} className="text-gray-500">
+                <a href={icon.link} target="_blank" className="text-gray-500">
                   {icon.name}
                 </a>
               </div>
