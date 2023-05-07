@@ -2,7 +2,7 @@ import aboutImg from '@assets/images/about.png'
 
 export const About = () => {
   const info = [
-    { text: 'Años de experiencia', count: '02' },
+    { text: 'Años de experiencia', count: '03' },
     { text: 'Projectos trabajados', count: '10' },
     { text: 'Compañías trabajadas', count: '02' },
   ]
