@@ -1,6 +1,12 @@
-import { TypographyProps } from '@mui/material'
+import { BaseTextFieldProps, TypographyProps } from '@mui/material'
 
-import { TypeAnimation, TypeColor, TypeLoader } from '@types'
+import {
+  TypeAnimation,
+  TypeColor,
+  TypeInputIconMode,
+  TypeLoader,
+  TypeValidation,
+} from '@types'
 
 export interface IconButtonCustomProps {
   onClick?: () => void
@@ -32,4 +38,28 @@ export interface TextCustomProps {
   variant?: TypographyProps['variant']
   isWrap?: boolean
   className?: string
+}
+
+export interface TextInputCustomProps {
+  name?: string
+  value?: string
+  setValue: (value: string) => void
+  onBlur?: () => void
+  onEnter?: () => void
+  placeholder?: string
+  type?: BaseTextFieldProps['type']
+  typesValidation?: TypeValidation
+  validInitNumbers?: number[]
+  maxLength?: number
+  className?: string
+  iconStart?: React.ReactElement<SvgIconProps> | null
+  iconEnd?: React.ReactElement<SvgIconProps> | null
+  iconMode?: TypeInputIconMode
+  iconTypeColor?: TypeColor
+  iconOnClick?: () => void
+  msgError?: string | null
+  disabled?: boolean
+  multiline?: boolean
+  required?: boolean
+  fontSize?: number
 }

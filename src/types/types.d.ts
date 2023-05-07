@@ -9,6 +9,10 @@ export type TypeColor =
   | 'dark-gray'
   | 'white'
 
+export type TypeInputIconMode = 'adornment' | 'button'
+
+export type TypeLanguage = 'es' | 'en'
+
 export type TypeLoader = 'block' | 'modal'
 
 export type TypeValidation =
