@@ -1,5 +1,8 @@
 const functions = require('firebase-functions')
 const nodemailer = require('nodemailer')
+const corsModule = require('cors')
+
+const cors = corsModule({ origin: true })
 
 const transport = nodemailer.createTransport({
   service: 'Gmail',
@@ -30,20 +33,22 @@ const sendContactForm = async form => {
 }
 
 exports.contactForm = functions.https.onRequest(async (req, res) => {
-  // Authorize the use of the API.
-  if (req.body.secret !== process.env.API_SECRET)
-    return res.status(403).send({ message: 'Missing secret', data: null })
+  cors(req, res, async () => {
+    // Authorize the use of the API.
+    if (req.body.secret !== process.env.API_SECRET)
+      return res.status(403).send({ message: 'Missing secret', data: null })
 
-  // Validate that the mail was sent by Nodemailer.
-  const responseNodemailer = await sendContactForm(req.body)
-  if (responseNodemailer)
-    return res.status(500).send({
-      message: 'Ha ocurrido un error, no se pudo enviar el correo.',
-      data: responseNodemailer,
-    })
+    // Validate that the mail was sent by Nodemailer.
+    const responseNodemailer = await sendContactForm(req.body)
+    if (responseNodemailer)
+      return res.status(500).send({
+        message: 'Ha ocurrido un error, no se pudo enviar el correo.',
+        data: responseNodemailer,
+      })
 
-  // Send successful response.
-  return res
-    .status(200)
-    .send({ message: '¡Correo enviado exitósamente!', data: null })
+    // Send successful response.
+    return res
+      .status(200)
+      .send({ message: '¡Correo enviado exitósamente!', data: null })
+  })
 })
