@@ -65,6 +65,7 @@ export const Project = () => {
     {
       img: LuisSolanoWebsite,
       name: 'Sitio Web Luis Solano',
+      github_link: 'https://github.com/XxLuisFer15xX/luis-solano-website',
       live_link: '#home',
     },
     {
