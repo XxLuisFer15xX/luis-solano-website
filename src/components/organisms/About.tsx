@@ -20,8 +20,8 @@ export const About = () => {
                 Soy desarrollador FullStack con conocimientos en el desarrollo
                 de software para aplicaciones web y móvil. He contribuido al
                 desarrollo de aplicaciones web como{' '}
-                <span className="text-cyan-600">Medicatel, SISA y TimeOut</span>
-                . También al desarrollo de aplicaciones móviles como{' '}
+                <span className="text-cyan-600">Medicatel, SISA y Glodis</span>.
+                También al desarrollo de aplicaciones móviles como{' '}
                 <span className="text-cyan-600">
                   Dilo, Glodis y Espresso Americano
                 </span>
@@ -49,7 +49,7 @@ export const About = () => {
               </div>
               <br />
               <br />
-              <a href="./src/assets/Curriculum_Luis_Solano.pdf" download>
+              <a href="./src/assets/documents/CV_Luis_Solano.pdf" download>
                 <button className="btn-primary">Descargar CV</button>
               </a>
             </div>

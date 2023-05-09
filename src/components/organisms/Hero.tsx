@@ -50,7 +50,7 @@ export const Hero = () => {
             Mi nombre es <span>Luis Solano</span>
           </h1>
           <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
-            Fullstack Developer / React Developer
+            Full Stack Developer / React Developer
           </h4>
           <button className="btn-primary mt-8" onClick={handleContactMe}>
             Contáctame

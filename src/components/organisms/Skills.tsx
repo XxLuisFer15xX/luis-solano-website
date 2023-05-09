@@ -133,7 +133,7 @@ export const Skills = () => {
     },
     {
       logo: <OracleIcon width={80} height={80} />,
-      level: 'Oracle',
+      level: 'Oracle DB',
       count: 100,
     },
     {
