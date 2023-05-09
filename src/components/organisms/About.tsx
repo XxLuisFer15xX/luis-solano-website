@@ -49,7 +49,7 @@ export const About = () => {
               </div>
               <br />
               <br />
-              <a href="./src/assets/documents/CV_Luis_Solano.pdf" download>
+              <a href="/CV_Luis_Solano.pdf" download>
                 <button className="btn-primary">Descargar CV</button>
               </a>
             </div>
